@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="membership_AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/membership_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/membership_colorPrimaryDark</item>
+        <item name="colorAccent">@color/membership_colorAccent</item>
+    </style>
+
+</resources>
