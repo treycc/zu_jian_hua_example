@@ -5,89 +5,89 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_column="5"
+    android:fitsSystemWindows="true"
     android:layout_margin="@dimen/grid_margin"
     android:layout_row="3">
 
-    <!--<FrameLayout-->
-        <!--android:layout_width="100dp"-->
-        <!--android:layout_margin="10dp"-->
-        <!--android:background="@drawable/shape_item_bg"-->
-        <!--app:layout_column="0"-->
-        <!--app:layout_gravity="fill_vertical"-->
-        <!--app:layout_row="0"-->
-        <!--app:layout_rowSpan="4" />-->
+    <FrameLayout
+        android:background="@drawable/shape_item_bg"
+        app:layout_column="0"
+        app:layout_columnWeight="1"
+        app:layout_gravity="fill_vertical"
+        app:layout_row="0"
+        app:layout_rowSpan="4" />
 
-    <!--<FrameLayout-->
-        <!--android:layout_width="100dp"-->
-        <!--android:layout_margin="10dp"-->
-        <!--android:background="@drawable/shape_item_bg"-->
-        <!--app:layout_column="1"-->
-        <!--app:layout_gravity="fill_vertical"-->
-        <!--app:layout_row="0"-->
-        <!--app:layout_rowSpan="4" />-->
+    <FrameLayout
+        android:background="@drawable/shape_item_bg"
+        app:layout_column="1"
+        app:layout_columnWeight="1"
+        app:layout_gravity="fill_vertical"
+        app:layout_row="0"
+        app:layout_rowSpan="4" />
 
-    <!--<FrameLayout-->
-    <!--app:layout_column="2"-->
-    <!--app:layout_columnWeight="1"-->
-    <!--app:layout_row="0"-->
-    <!--app:layout_rowWeight="1"-->
-    <!--android:background="@drawable/shape_item_bg" />-->
+    <FrameLayout
+        android:background="@drawable/shape_item_bg"
+        app:layout_column="2"
+        app:layout_columnWeight="1"
+        app:layout_row="0"
+        app:layout_rowWeight="1" />
 
-    <!--<FrameLayout-->
-    <!--app:layout_column="3"-->
-    <!--app:layout_columnWeight="1"-->
-    <!--app:layout_row="0"-->
-    <!--app:layout_rowWeight="1"-->
-    <!--android:background="@drawable/shape_item_bg" />-->
+    <FrameLayout
+        android:background="@drawable/shape_item_bg"
+        app:layout_column="3"
+        app:layout_columnWeight="1"
+        app:layout_row="0"
+        app:layout_rowWeight="1" />
 
-    <!--<FrameLayout-->
-    <!--app:layout_column="4"-->
-    <!--app:layout_columnWeight="1"-->
-    <!--app:layout_row="0"-->
-    <!--app:layout_rowWeight="1"-->
-    <!--android:background="@drawable/shape_item_bg" />-->
+    <FrameLayout
+        android:background="@drawable/shape_item_bg"
+        app:layout_column="4"
+        app:layout_columnWeight="1"
+        app:layout_row="0"
+        app:layout_rowWeight="1" />
 
-    <!--<FrameLayout-->
-    <!--app:layout_column="2"-->
-    <!--app:layout_columnWeight="1"-->
-    <!--app:layout_row="1"-->
-    <!--app:layout_rowWeight="1"-->
-    <!--android:background="@drawable/shape_item_bg" />-->
+    <FrameLayout
+        android:background="@drawable/shape_item_bg"
+        app:layout_column="2"
+        app:layout_columnWeight="1"
+        app:layout_row="1"
+        app:layout_rowWeight="1" />
 
-    <!--<FrameLayout-->
-    <!--app:layout_column="3"-->
-    <!--app:layout_columnWeight="1"-->
-    <!--app:layout_row="1"-->
-    <!--app:layout_rowWeight="1"-->
-    <!--android:background="@drawable/shape_item_bg" />-->
+    <FrameLayout
+        android:background="@drawable/shape_item_bg"
+        app:layout_column="3"
+        app:layout_columnWeight="1"
+        app:layout_row="1"
+        app:layout_rowWeight="1" />
 
-    <!--<FrameLayout-->
-    <!--app:layout_column="4"-->
-    <!--app:layout_columnWeight="1"-->
-    <!--app:layout_row="1"-->
-    <!--app:layout_rowWeight="1"-->
-    <!--android:background="@drawable/shape_item_bg" />-->
+    <FrameLayout
+        android:background="@drawable/shape_item_bg"
+        app:layout_column="4"
+        app:layout_columnWeight="1"
+        app:layout_row="1"
+        app:layout_rowSpan="1"
+        app:layout_rowWeight="0.5" />
 
-    <!--<FrameLayout-->
-    <!--app:layout_column="2"-->
-    <!--app:layout_columnWeight="1"-->
-    <!--app:layout_row="3"-->
-    <!--app:layout_rowWeight="1"-->
-    <!--android:background="@drawable/shape_item_bg" />-->
+    <FrameLayout
+        android:background="@drawable/shape_item_bg"
+        app:layout_column="2"
+        app:layout_columnWeight="1"
+        app:layout_row="3"
+        app:layout_rowWeight="1" />
 
-    <!--<FrameLayout-->
-    <!--app:layout_column="3"-->
-    <!--app:layout_columnWeight="1"-->
-    <!--app:layout_row="3"-->
-    <!--app:layout_rowWeight="1"-->
-    <!--android:background="@drawable/shape_item_bg" />-->
+    <FrameLayout
+        android:background="@drawable/shape_item_bg"
+        app:layout_column="3"
+        app:layout_columnWeight="1"
+        app:layout_row="3"
+        app:layout_rowWeight="1" />
 
-    <!--<FrameLayout-->
-    <!--app:layout_column="4"-->
-    <!--app:layout_columnWeight="1"-->
-    <!--app:layout_row="3"-->
-    <!--app:layout_rowWeight="1"-->
-    <!--android:background="@drawable/shape_item_bg" />-->
+    <FrameLayout
+        android:background="@drawable/shape_item_bg"
+        app:layout_column="4"
+        app:layout_columnWeight="1"
+        app:layout_row="3"
+        app:layout_rowWeight="1" />
 
 
 </android.support.v7.widget.GridLayout>

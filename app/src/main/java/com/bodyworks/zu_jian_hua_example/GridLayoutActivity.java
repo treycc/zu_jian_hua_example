@@ -1,8 +1,10 @@
 package com.bodyworks.zu_jian_hua_example;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayout;
 import android.util.DisplayMetrics;
@@ -27,12 +29,15 @@ public class GridLayoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gridlayout);
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                | View.SYSTEM_UI_FLAG_FULLSCREEN
-                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+//                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+//                | View.SYSTEM_UI_FLAG_FULLSCREEN
+//                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+//                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS|WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        getWindow().setStatusBarColor(Color.parseColor("#99000000"));
         gridLayout = (GridLayout) findViewById(R.id.gridlayout);
+        gridLayout.setUseDefaultMargins(true);
 
         WindowManager windowManager = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
         DisplayMetrics dm = new DisplayMetrics();// 创建了一张白纸
@@ -49,6 +54,9 @@ public class GridLayoutActivity extends AppCompatActivity {
         int totalHeightMargin = 3 * 2 * gridItemMargin + gridMargin * 2;
         int itemWidth = (widthPixels - totalWideMargin) / 5;
         int itemHeight = (heightPixels - totalHeightMargin) / 3;
+
+        if(true)
+            return;
 
         for (int i = 0; i < 2; i++) {
             FrameLayout framItem = new FrameLayout(this);
@@ -72,7 +80,7 @@ public class GridLayoutActivity extends AppCompatActivity {
                 GridLayout.Spec colomnSpec = GridLayout.spec(j, 1.0f);
                 GridLayout.LayoutParams layoutParams = new GridLayout.LayoutParams(rowSpec, colomnSpec);
                 layoutParams.width = itemWidth;
-                layoutParams.height = itemWidth;
+                layoutParams.height = itemHeight;
                 layoutParams.setMargins(gridItemMargin, gridItemMargin, gridItemMargin, gridItemMargin);
                 framItem.setLayoutParams(layoutParams);
                 framItem.setBackgroundResource(R.drawable.shape_item_bg);
