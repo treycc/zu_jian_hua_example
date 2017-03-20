@@ -27,5 +27,5 @@ dependencies {
         compile project(':manage')
         compile project(':membership')
     }
-
+    compile 'com.android.support:gridlayout-v7:25.2.0'
 }

@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goMembership(View v) {
-
+        startActivity(new Intent(this, GridLayoutActivity.class));
     }
 
     @Override
