@@ -5,6 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
     android:orientation="vertical"
     tools:context="com.bodyworks.zu_jian_hua_example.MainActivity">
 
@@ -26,16 +27,22 @@
             android:text="@string/title_home" />
 
         <Button
-            android:text="跳转到manage模块"
-            android:onClick="goManage"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:onClick="goManage"
+            android:text="跳转到manage模块" />
 
         <Button
-            android:text="跳转到membership模块"
-            android:onClick="goMembership"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:onClick="goMembership"
+            android:text="GridLayoutActivity" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="status"
+            android:text="StatuBarActivity" />
 
     </LinearLayout>
 

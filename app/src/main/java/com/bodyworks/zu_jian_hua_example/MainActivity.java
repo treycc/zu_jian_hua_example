@@ -14,7 +14,9 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+import me.yokeyword.swipebackfragment.SwipeBackActivity;
+
+public class MainActivity extends SwipeBackActivity {
 
     private TextView mTextMessage;
 
@@ -57,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void goMembership(View v) {
         startActivity(new Intent(this, GridLayoutActivity.class));
+    }
+
+    public void status(View v){
+        startActivity(new Intent(this,StatusBarActivity.class));
     }
 
     @Override
