@@ -44,6 +44,12 @@
             android:onClick="status"
             android:text="StatuBarActivity" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="mvp"
+            android:text="MvpActivity" />
+
     </LinearLayout>
 
     <android.support.design.widget.BottomNavigationView

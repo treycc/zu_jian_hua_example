@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.bodyworks.zu_jian_hua_example.mvp.MVPActivity;
+
 import java.util.List;
 
 import me.yokeyword.swipebackfragment.SwipeBackActivity;
@@ -61,8 +63,12 @@ public class MainActivity extends SwipeBackActivity {
         startActivity(new Intent(this, GridLayoutActivity.class));
     }
 
-    public void status(View v){
-        startActivity(new Intent(this,StatusBarActivity.class));
+    public void status(View v) {
+        startActivity(new Intent(this, StatusBarActivity.class));
+    }
+
+    public void mvp(View view) {
+        startActivity(new Intent(this, MVPActivity.class));
     }
 
     @Override
