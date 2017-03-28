@@ -13,5 +13,4 @@ public interface MainView {
     void loadDataComplate(String loadedText);
 
     void changeName(String chageText);
-
 }

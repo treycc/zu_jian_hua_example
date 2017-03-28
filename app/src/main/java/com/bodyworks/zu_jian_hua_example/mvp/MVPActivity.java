@@ -24,6 +24,7 @@ public class MVPActivity extends MvpBaseActivity<MainView, MainPresenter> implem
     private ProgressBar progressBar;
     private TextView textView;
     private EditText editText;
+    private MvpFragment mvpFragment;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,6 +33,12 @@ public class MVPActivity extends MvpBaseActivity<MainView, MainPresenter> implem
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         textView = (TextView) findViewById(R.id.textView);
         editText = (EditText) findViewById(R.id.editText);
+        findViewById(R.id.imageButton).setVisibility(View.GONE);
+
+//        MvpFragment mvpFragment = new MvpFragment();
+//        getSupportFragmentManager().beginTransaction().add(R.id.container, mvpFragment)
+//                .addToBackStack(null)
+//                .commit();
     }
 
     @NonNull
@@ -71,4 +78,5 @@ public class MVPActivity extends MvpBaseActivity<MainView, MainPresenter> implem
         textView.setText(chageText);
         hideProgress();
     }
+
 }
