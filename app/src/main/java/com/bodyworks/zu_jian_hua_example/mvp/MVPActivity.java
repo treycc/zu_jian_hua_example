@@ -3,7 +3,6 @@ package com.bodyworks.zu_jian_hua_example.mvp;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.view.View;
 import android.widget.EditText;
@@ -12,8 +11,14 @@ import android.widget.TextView;
 
 import com.bodyworks.zu_jian_hua_example.R;
 import com.bodyworks.zu_jian_hua_example.mvp.base.MvpBaseActivity;
+import com.bodyworks.zu_jian_hua_example.mvp.dagger.DaggerMainComponent;
+import com.bodyworks.zu_jian_hua_example.mvp.dagger.MainComponent;
+import com.bodyworks.zu_jian_hua_example.mvp.dagger.MainModule;
+import com.bodyworks.zu_jian_hua_example.mvp.dagger.Person;
 import com.bodyworks.zu_jian_hua_example.mvp.presenter.MainPresenter;
 import com.bodyworks.zu_jian_hua_example.mvp.view.MainView;
+
+import javax.inject.Inject;
 
 /**
  * Created by treycc on 2017/3/27.
@@ -25,6 +30,11 @@ public class MVPActivity extends MvpBaseActivity<MainView, MainPresenter> implem
     private TextView textView;
     private EditText editText;
     private MvpFragment mvpFragment;
+
+    @Inject
+    Person person;
+    @Inject
+    Person person2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,6 +49,11 @@ public class MVPActivity extends MvpBaseActivity<MainView, MainPresenter> implem
 //        getSupportFragmentManager().beginTransaction().add(R.id.container, mvpFragment)
 //                .addToBackStack(null)
 //                .commit();
+
+        MainComponent component = DaggerMainComponent.builder().mainModule(new MainModule()).build();
+        component.inject(this);
+//        DaggerMainComponent.create().inject(this);
+
     }
 
     @NonNull
