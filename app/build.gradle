@@ -1,4 +1,3 @@
-
 apply plugin: 'com.android.application'
 
 android {
@@ -10,6 +9,7 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -23,15 +23,30 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile 'com.android.support:design:25.2.0'
+    compile 'com.android.support:cardview-v7:25.2.0'
+    compile 'com.android.support:gridlayout-v7:25.2.0'
+    compile 'com.google.code.gson:gson:2.4'
     if (!isDebug.toBoolean()) {
         compile project(':manage')
         compile project(':membership')
     }
-    compile 'com.android.support:gridlayout-v7:25.2.0'
-    compile 'com.jaeger.statusbaruitl:library:1.3.6'
+
     compile 'me.yokeyword:swipebackfragment:0.2.2'
     compile 'com.r0adkll:slidableactivity:2.0.5'
 
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.3'
+    compile('com.alibaba.android:vlayout:1.0.3@aar') {
+        transitive = true
+    }
+
+    compile 'com.chauncey.view:floatingdecoration:1.0.1'
+    compile 'com.oushangfeng:PinnedSectionItemDecoration:1.2.4'
+    compile 'org.zakariya.stickyheaders:stickyheaders:0.7.6'
+
+    compile 'com.nikhilpanju.recyclerviewenhanced:recyclerviewenhanced:1.1.0'
+
     compile 'com.google.dagger:dagger:2.10'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.10'
+
+    compile project(path: ':library')
 }

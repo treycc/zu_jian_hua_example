@@ -11,13 +11,12 @@ import android.widget.FrameLayout;
 
 import com.r0adkll.slidr.Slidr;
 
-import me.yokeyword.swipebackfragment.SwipeBackActivity;
 
 /**
  * Created by treycc on 2017/3/20.
  */
 
-public class GridLayoutActivity extends SwipeBackActivity {
+public class GridLayoutActivity extends AppCompatActivity {
 
     private static final String TAG = "width";
     private GridLayout gridLayout;

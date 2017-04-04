@@ -41,14 +41,26 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="status"
-            android:text="StatuBarActivity" />
+            android:onClick="mvp"
+            android:text="MvpActivity" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="mvp"
-            android:text="MvpActivity" />
+            android:onClick="multirecy"
+            android:text="MultiRecyclerViewActivity" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="staggeredgrid"
+            android:text="StaggeredGridActivity" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="stickyandswipe"
+            android:text="StickyAndSwipeActivity" />
 
     </LinearLayout>
 

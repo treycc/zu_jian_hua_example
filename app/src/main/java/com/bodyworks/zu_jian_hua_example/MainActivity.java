@@ -16,9 +16,7 @@ import com.bodyworks.zu_jian_hua_example.mvp.MVPActivity;
 
 import java.util.List;
 
-import me.yokeyword.swipebackfragment.SwipeBackActivity;
-
-public class MainActivity extends SwipeBackActivity {
+public class MainActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
 
@@ -63,13 +61,23 @@ public class MainActivity extends SwipeBackActivity {
         startActivity(new Intent(this, GridLayoutActivity.class));
     }
 
-    public void status(View v) {
-        startActivity(new Intent(this, StatusBarActivity.class));
-    }
 
     public void mvp(View view) {
         startActivity(new Intent(this, MVPActivity.class));
     }
+
+    public void multirecy(View view) {
+        startActivity(new Intent(this, MultiRecyclerViewActivity.class));
+    }
+
+    public void staggeredgrid(View view) {
+        startActivity(new Intent(this, StaggeredGridActivity.class));
+    }
+
+    public void stickyandswipe(View view) {
+        startActivity(new Intent(this, StickyAndSwipeActivity.class));
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,1 +1,1 @@
-include ':app', ':manage', ':membership'
+include ':app', ':manage', ':membership', ':library'

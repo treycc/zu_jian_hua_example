@@ -27,12 +27,21 @@
         <activity
             android:name=".GridLayoutActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".StatusBarActivity"
-            android:screenOrientation="portrait" />
 
         <activity
             android:name=".mvp.MVPActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".MultiRecyclerViewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".StaggeredGridActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".StickyAndSwipeActivity"
             android:screenOrientation="portrait" />
     </application>
 
