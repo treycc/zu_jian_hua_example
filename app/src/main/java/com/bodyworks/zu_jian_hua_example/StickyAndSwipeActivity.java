@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,6 +15,7 @@ import com.bodyworks.zu_jian_hua_example.adapter.StickAndSwipeAdapter;
 import com.bodyworks.zu_jian_hua_example.entitiy.StockResponse;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.google.gson.Gson;
+import com.nikhilpanju.recyclerviewenhanced.RecyclerTouchListener;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -78,49 +80,49 @@ public class StickyAndSwipeActivity extends AppCompatActivity {
 //        recyclerView.addItemDecoration(decoration);
 
 
-        //左滑
-//        RecyclerTouchListener recyclerTouchListener = new RecyclerTouchListener(this, recyclerView);
-//        recyclerTouchListener
-//                .setIndependentViews(R.id.rowButton)
-//                .setViewsToFade(R.id.rowButton)
-//                .setClickable(new RecyclerTouchListener.OnRowClickListener() {
-//                    @Override
-//                    public void onRowClicked(int position) {
-//                        Snackbar.make(recyclerView, (position + 1) + "行被点击" + ":::onRowClicked", Snackbar.LENGTH_SHORT).show();
-//                    }
-//
-//                    @Override
-//                    public void onIndependentViewClicked(int independentViewID, int position) {
-//                        Snackbar.make(recyclerView, (position + 1) + "行被点击" + ":::onIndependentViewClicked", Snackbar.LENGTH_SHORT).show();
-//                    }
-//                })
-//                .setLongClickable(true, new RecyclerTouchListener.OnRowLongClickListener() {
-//                    @Override
-//                    public void onRowLongClicked(int position) {
-//                        Snackbar.make(recyclerView, (position + 1) + "行被长按", Snackbar.LENGTH_SHORT).show();
-//                    }
-//                })
-//                .setSwipeOptionViews(R.id.add, R.id.edit, R.id.change)
-//                .setSwipeable(R.id.rowFG, R.id.rowBG, new RecyclerTouchListener.OnSwipeOptionsClickListener() {
-//                    @Override
-//                    public void onSwipeOptionClicked(int viewID, int position) {
-//                        String message = "";
-//                        if (viewID == R.id.add) {
-//                            message += "Add";
-//                        } else if (viewID == R.id.edit) {
-//                            message += "Edit";
-//                        } else if (viewID == R.id.change) {
-//                            message += "Change";
-//                        }
-//                        message += " clicked for row " + (position + 1);
-//                        Snackbar.make(recyclerView, (position + 1) + message, Snackbar.LENGTH_SHORT).show();
-//                    }
-//                });
-//        recyclerView.addOnItemTouchListener(recyclerTouchListener);
+        //左滑,更改adapter的data类型条目的布局为swipe
+        RecyclerTouchListener recyclerTouchListener = new RecyclerTouchListener(this, recyclerView);
+        recyclerTouchListener
+                .setIndependentViews(R.id.rowButton)
+                .setViewsToFade(R.id.rowButton)
+                .setClickable(new RecyclerTouchListener.OnRowClickListener() {
+                    @Override
+                    public void onRowClicked(int position) {
+                        Snackbar.make(recyclerView, (position + 1) + "行被点击" + ":::onRowClicked", Snackbar.LENGTH_SHORT).show();
+                    }
 
-        //炫富条
-//        stickyHeadLayout.setVisibility(View.VISIBLE);
-//        recyclerView.addOnScrollListener(new StickyScrollListener(stickAndSwipeAdapter, stickyHeadLayout));
+                    @Override
+                    public void onIndependentViewClicked(int independentViewID, int position) {
+                        Snackbar.make(recyclerView, (position + 1) + "行被点击" + ":::onIndependentViewClicked", Snackbar.LENGTH_SHORT).show();
+                    }
+                })
+                .setLongClickable(true, new RecyclerTouchListener.OnRowLongClickListener() {
+                    @Override
+                    public void onRowLongClicked(int position) {
+                        Snackbar.make(recyclerView, (position + 1) + "行被长按", Snackbar.LENGTH_SHORT).show();
+                    }
+                })
+                .setSwipeOptionViews(R.id.add, R.id.edit, R.id.change)
+                .setSwipeable(R.id.rowFG, R.id.rowBG, new RecyclerTouchListener.OnSwipeOptionsClickListener() {
+                    @Override
+                    public void onSwipeOptionClicked(int viewID, int position) {
+                        String message = "";
+                        if (viewID == R.id.add) {
+                            message += "Add";
+                        } else if (viewID == R.id.edit) {
+                            message += "Edit";
+                        } else if (viewID == R.id.change) {
+                            message += "Change";
+                        }
+                        message += " clicked for row " + (position + 1);
+                        Snackbar.make(recyclerView, (position + 1) + message, Snackbar.LENGTH_SHORT).show();
+                    }
+                });
+        recyclerView.addOnItemTouchListener(recyclerTouchListener);
+
+//        炫富条
+        stickyHeadLayout.setVisibility(View.VISIBLE);
+        recyclerView.addOnScrollListener(new StickyScrollListener(stickAndSwipeAdapter, stickyHeadLayout));
         //点击
 //        stickAndSwipeAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
 //            @Override
@@ -163,11 +165,11 @@ public class StickyAndSwipeActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         if (loadMoreCount < 2) {
-                            if(isErr){
+                            if (isErr) {
                                 stickAndSwipeAdapter.addData(loadMoreData(strFromAssets));
                                 stickAndSwipeAdapter.loadMoreComplete();
                                 loadMoreCount++;
-                            }else{
+                            } else {
                                 isErr = true;
                                 stickAndSwipeAdapter.loadMoreFail();
                             }

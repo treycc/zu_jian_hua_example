@@ -17,7 +17,7 @@ public class StickAndSwipeAdapter extends BaseMultiItemQuickAdapter<StockRespons
     public StickAndSwipeAdapter(List<StockResponse.StockInfo> data) {
         super(data);
         addItemType(StockResponse.StockInfo.STICK_TITLE, R.layout.item_sticky_head);
-        addItemType(StockResponse.StockInfo.DATA, R.layout.item_stick);
+        addItemType(StockResponse.StockInfo.DATA, R.layout.item_swipe);
     }
 
 
