@@ -121,8 +121,8 @@ public class StickyAndSwipeActivity extends AppCompatActivity {
         recyclerView.addOnItemTouchListener(recyclerTouchListener);
 
 //        炫富条
-        stickyHeadLayout.setVisibility(View.VISIBLE);
-        recyclerView.addOnScrollListener(new StickyScrollListener(stickAndSwipeAdapter, stickyHeadLayout));
+//        stickyHeadLayout.setVisibility(View.VISIBLE);
+//        recyclerView.addOnScrollListener(new StickyScrollListener(stickAndSwipeAdapter, stickyHeadLayout));
         //点击
 //        stickAndSwipeAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
 //            @Override
